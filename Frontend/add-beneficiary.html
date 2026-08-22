@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Beneficiary</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>Add Beneficiary</h1>
+
+<form id="beneficiaryForm">
+
+<input id="name" placeholder="Beneficiary Name">
+
+<br>
+
+<input id="accountNumber" placeholder="Account Number">
+
+<br>
+
+<input id="bankName" placeholder="Bank Name">
+
+<br>
+
+<input id="ifscCode" placeholder="IFSC Code">
+
+<br><br>
+
+<button type="submit">
+Save Beneficiary
+</button>
+
+</form>
+
+<p id="message"></p>
+
+<script src="js/config.js"></script>
+
+<script>
+
+document.getElementById("beneficiaryForm")
+.addEventListener("submit", async function(e){
+
+e.preventDefault();
+
+const beneficiary = {
+
+name:
+document.getElementById("name").value,
+
+accountNumber:
+document.getElementById("accountNumber").value,
+
+bankName:
+document.getElementById("bankName").value,
+
+ifscCode:
+document.getElementById("ifscCode").value
+
+};
+
+try{
+
+await fetch(
+API_BASE_URL + "/beneficiaries",
+{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body: JSON.stringify(beneficiary)
+}
+);
+
+document.getElementById("message")
+.innerHTML =
+"<span class='success'>Beneficiary Added Successfully</span>";
+
+}
+catch(error){
+
+document.getElementById("message")
+.innerHTML =
+"<span class='error'>Failed to Add Beneficiary</span>";
+
+}
+
+});
+
+</script>
+
+</body>
+</html>

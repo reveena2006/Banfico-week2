@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Account Details</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>Account Details</h1>
+
+<div id="details"></div>
+
+<script src="js/config.js"></script>
+
+<script>
+
+const accountId =
+new URLSearchParams(window.location.search)
+.get("id");
+
+fetch(API_BASE_URL + "/accounts/" + accountId)
+.then(response => response.json())
+.then(account => {
+
+document.getElementById("details")
+.innerHTML = `
+
+<p><b>ID:</b> ${account.id}</p>
+<p><b>Account Number:</b> ${account.accountNumber}</p>
+<p><b>Account Type:</b> ${account.accountType}</p>
+<p><b>Balance:</b> ${account.balance}</p>
+
+`;
+
+});
+
+</script>
+
+</body>
+</html>
