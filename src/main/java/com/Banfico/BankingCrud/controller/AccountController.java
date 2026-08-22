@@ -4,9 +4,10 @@ import com.Banfico.BankingCrud.entity.Account;
 import com.Banfico.BankingCrud.service.AccountService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-
+import org.springframework.web.bind.annotation.CrossOrigin;
 import java.util.List;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/accounts")
 public class AccountController {
