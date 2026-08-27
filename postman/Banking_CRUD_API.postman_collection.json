@@ -319,6 +319,180 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "Get Admin Token",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "client_id",
+              "value": "banking-api",
+              "type": "text",
+              "uuid": "513139a6-4768-4405-861c-e0e99e21e627"
+            },
+            {
+              "key": "client_secret",
+              "value": "izRQgXJOsQctWpAu6Bl8jSTZeHikDNwGzfNWSoDI5WvnoJywuauFN3Mt1zmUtwD2ANkFwywpApxDL0LXRhZ0Z7",
+              "type": "text",
+              "uuid": "d7178f54-9531-4d0f-9b59-0b29dea70a5a"
+            },
+            {
+              "key": "username",
+              "value": "adminuser",
+              "type": "text",
+              "uuid": "d33649e3-5cfe-476f-a311-e76e9155832c"
+            },
+            {
+              "key": "password",
+              "value": "password123",
+              "type": "text",
+              "uuid": "dc167dff-b428-4b9e-a693-e8306da2d74f"
+            },
+            {
+              "key": "grant_type",
+              "value": "password",
+              "type": "text",
+              "uuid": "71a9f3e9-9958-4275-a00f-5d90d24e83be"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:9090/realms/BankingRealm/protocol/openid-connect/token",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "realms",
+            "BankingRealm",
+            "protocol",
+            "openid-connect",
+            "token"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "admin",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "makeruser_access",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "makeuser",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "client_id",
+              "value": "banking-api",
+              "type": "text",
+              "uuid": "08e9a41c-7b27-4095-ae5a-117a3c1e5f12"
+            },
+            {
+              "key": "username",
+              "value": "makeruser",
+              "type": "text",
+              "uuid": "6e2726ca-abd8-4344-bd42-ef1cad17cf80"
+            },
+            {
+              "key": "password",
+              "value": "password123",
+              "type": "text",
+              "uuid": "84902fd7-5a2f-482b-ace1-c0ff60ea3893"
+            },
+            {
+              "key": "grant_type",
+              "value": "password",
+              "type": "text",
+              "uuid": "b45dbf54-78af-4954-a177-bd9f1ca751fa"
+            },
+            {
+              "key": "client_secret",
+              "value": "izRQgXJOsQctWpAu6Bl8jSTZeHikDNwGzfNWSoDI5WvnoJywuauFN3Mt1zmUtwD2ANkFwywpApxDL0LXRhZ0Z7",
+              "type": "text",
+              "uuid": "1504d150-3cec-401a-a3ff-a690602e619d"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:9090/realms/BankingRealm/protocol/openid-connect/token",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9090",
+          "path": [
+            "realms",
+            "BankingRealm",
+            "protocol",
+            "openid-connect",
+            "token"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "checkuser",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "checker_user_access",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "test maker only",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "checker_authorization",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "supabase_service_role_api_key_0pj4",
+      "secret": true
+    },
+    {
+      "key": "supabase_service_role_api_key_0qg7",
+      "secret": true
     }
   ]
 }
